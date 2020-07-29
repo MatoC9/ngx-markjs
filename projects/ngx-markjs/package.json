@@ -2,14 +2,21 @@
   "name": "@matej.cupka/ngx-markjs",
   "version": "0.1.3",
   "license": "MIT",
-  "author": {
-    "name": "Oleksandr Poshtaruk",
-    "email": "kievsash@ukr.net",
-    "url": "https://github.com/kievsash"
-  },
+  "contributors": [
+    {
+      "name": "Oleksandr Poshtaruk",
+      "email": "kievsash@ukr.net",
+      "url": "https://github.com/kievsash"
+    },
+    {
+      "name": "Matej Čupka",
+      "email": "matej.cupka@icloud.com",
+      "url": "https://github.com/MatoC9"
+    }
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kievsash/ngx-markjs.git"
+    "url": "git+https://github.com/MatoC9/ngx-markjs"
   },
   "keywords": [
     "mark.js",
