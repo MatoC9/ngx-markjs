@@ -1,5 +1,4 @@
-import {Directive, ElementRef, EventEmitter, Input, OnChanges, OnInit, Output, Renderer2} from '@angular/core';
-import {Observable, isObservable} from 'rxjs';
+import {Directive, ElementRef, EventEmitter, Input, OnChanges, Output, Renderer2} from '@angular/core';
 
 declare var require: any;
 const Mark = require('mark.js');
@@ -30,6 +29,7 @@ export class MarkjsHighlightDirective implements OnChanges {
 
   @Input() markjsHighlight = '';
   @Input() markjsConfig: any = {};
+  @Input() minimumMarkLength: number = 3;
   @Input() scrollToFirstMarked: boolean = false;
 
   @Output() getInstance = new EventEmitter<any>();
@@ -56,7 +56,7 @@ export class MarkjsHighlightDirective implements OnChanges {
 
   hightlightText() {
     this.markjsHighlight = this.markjsHighlight || '';
-    if (this.markjsHighlight && this.markjsHighlight.length <= 2) {
+    if (this.markjsHighlight && this.markjsHighlight.length <= (this.minimumMarkLength - 1)) {
       this.markInstance.unmark();
       return;
     } else {
