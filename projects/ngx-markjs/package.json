@@ -18,6 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/MatoC9/ngx-markjs"
   },
+  "private": false,
   "keywords": [
     "mark.js",
     "ngx-markjs",
